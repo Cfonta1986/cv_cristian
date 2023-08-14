@@ -1,5 +1,17 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import styled from "styled-components";
+import Input from '@mui/material/Input';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button'; 
+
+
+
+export const CajaForm = styled.form`
+  display: flex;
+  flex-direction: column;
+`
+
 
  const FormContacto =  () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -7,16 +19,18 @@ import { useForm } from 'react-hook-form';
   console.log(errors);
   
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" placeholder="Nombre" {...register("Nombre", {required: true})} />
-      <input type="email" placeholder="E-Mail" {...register("E-Mail", {required: true})} />
-      <input type="text" placeholder="Asunto" {...register("Asunto", { min: 2})} />
-      <textarea {...register("Mensaje", {required: true})} />
+    <CajaForm onSubmit={handleSubmit(onSubmit)}>
+      <Input  aria-label="Nombre" type="text" placeholder="Nombre" {...register("Nombre", {required: true, min: 2})} />
+      <Input  aria-label="E-Mail" type="email" placeholder="E-Mail" {...register("EMail", {required: true})} />
+      <Input  aria-label="Asunto" type="text" placeholder="Asunto" {...register("Asunto", {required:true, min: 2})} />
+      <TextField name="Mensaje" label="Mensaje" multiline rows={2} variant="outlined" {...register("Mensaje", { required: true })} />
 
-      <input type="submit" />
-    </form>
+      <Button type="submit" variant="contained">Submit</Button>
+    </CajaForm>
   );
 }
 
 
 export default FormContacto
+
+

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 export const CajaTelefono = styled.div`
     display: flex;
+    justify-content: space-around;
 `
 
 
