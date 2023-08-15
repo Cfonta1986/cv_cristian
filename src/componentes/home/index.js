@@ -3,17 +3,23 @@ import Skills from "../Skills";
 import Formacion from "../Formacion";
 import Experiencia from "../Experiencia";
 import Contacto from "../Contacto"
+import styled from "styled-components";
+
+
+const CajaHome = styled.div`
+    margin-top: 7rem;
+`
 
 
 function Home() {
     return(
-        <div>
+        <CajaHome>
             <SobreMi />
             <Skills />
             <Formacion />
             <Experiencia />
             <Contacto />
-        </div>
+        </CajaHome>
 );
 }
 

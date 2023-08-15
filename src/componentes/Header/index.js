@@ -24,19 +24,23 @@ const vibrar = keyframes`
 const CajaHeader = styled.div`
     display: flex;
     justify-content: space-around;
+    background-color: white;
     margin-bottom: 2rem;
-    margin-top: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,.4);
+    width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed; 
 `
 
 const NombreTitulo = styled.h1`
     margin-left: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     animation: ${vibrar} 1.2s infinite linear alternate;
 
     &:hover {
         cursor: pointer;
-        transform: scale(1.1);
         animation: none;
     }
 `
@@ -44,6 +48,8 @@ const NombreTitulo = styled.h1`
 const CajaMenu = styled.ul`
     display: flex;
     justify-content: flex-end;
+    margin-top: 1rem;
+
 `
 
 const LinkMenu = styled.li`
