@@ -9,7 +9,7 @@ const CajaFotoH3 = styled.div`
 
 
 
-const Sobre_mi = () => {
+const SobreMi = () => {
     return (
         <div>
             <CajaFotoH3>
@@ -38,4 +38,4 @@ const Sobre_mi = () => {
     )
 }
 
-export default Sobre_mi
+export default SobreMi

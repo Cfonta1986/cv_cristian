@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         text-decoration: none;
     }
+    *:hover{
+        transition: all 1s ease-out;
+    }
 `;
 
 export default GlobalStyle
