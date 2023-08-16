@@ -3,12 +3,12 @@ import FotoHtml from "../../assets/images/htlm.png"
 import FotoJs from "../../assets/images/js_icon.png"
 import FotoNode from "../../assets/images/nodejs_icon.png"
 import FotoReact from "../../assets/images/react_icon.png"
-
+import {CajaPrincipal} from "../SobreMi"
 
 
 const Skills = () => {
     return (
-        <div>
+        <CajaPrincipal>
             <h2>Skills</h2>
             <div>
                 <img src={FotoCss} alt="Foto CSS" />
@@ -17,7 +17,7 @@ const Skills = () => {
                 <img src={FotoNode} alt="Foto Node JS" />
                 <img src={FotoReact} alt="Foto React" />
             </div>
-        </div>
+        </CajaPrincipal>
     )
 }
 

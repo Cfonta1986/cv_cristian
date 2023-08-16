@@ -1,6 +1,7 @@
 import FormContacto from "../FormContacto";
 import FotoTelefono from "../../assets/images/contact_image.png";
 import styled from "styled-components";
+import { CajaPrincipal } from "../SobreMi";
 
 export const CajaTelefono = styled.div`
     display: flex;
@@ -10,7 +11,7 @@ export const CajaTelefono = styled.div`
 
 const Contacto = () => {
     return (
-        <div>
+        <CajaPrincipal>
             <div>
                 <h2>Contacto</h2>
             </div>
@@ -18,7 +19,7 @@ const Contacto = () => {
                 <img src={FotoTelefono} alt="Foto telefono de contacto" />
                 <FormContacto />
             </CajaTelefono>
-        </div>
+        </CajaPrincipal>
     )
 }
 
