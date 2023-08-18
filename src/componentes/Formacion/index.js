@@ -31,13 +31,13 @@ const Formacion = () => {
                 </div>
                 <div>
                     <img src={FotoGoogle} alt="Foto Google" />
-                    <h5>Introducción al Marketing Digital</h5>
+                    <h5>Introducción al Marketing Digital.</h5>
                     <p>2018 - Google Activate</p>
                 </div>
                 <div>
                     <img src={FotoArgProg} alt="Foto Argentina Programa 4.0" />
-                    <h5>Principiante en Programación</h5>
-                    <h5>Procesamiento de datos con Python</h5>
+                    <h5>Principiante en Programación.</h5>
+                    <h5>Procesamiento de datos con Python.</h5>
                     <p>2023 - Argentina Programa 4.0</p>
                 </div>
             </CajaCursos>
