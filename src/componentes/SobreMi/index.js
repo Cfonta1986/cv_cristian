@@ -3,6 +3,8 @@ import Foto_cv from "../../assets/images/foto_cv_redonda.png"
 import { Link } from "react-router-dom"
 import FotoGitHub from "../../assets/images/github.png"
 import FotoLinkedIn from "../../assets/images/linkedin.png"
+import FotoLogoCF from "../../assets/images/LOGO_CF_limpio_ch.png"
+
 
 
 export const CajaPrincipal = styled.div`
@@ -42,7 +44,7 @@ const SobreMi = () => {
                      <div>
                     <Link to="https://www.linkedin.com/in/cristian-fontanini/"><img src={FotoLinkedIn} alt="Foto LikedIn"/></Link>
                     <Link to="https://github.com/Cfonta1986"><img src={FotoGitHub} alt="Foto GitHub"/></Link>
-                    <Link to="#">Curriculum</Link>
+                    <Link to="#"><img src={FotoLogoCF} alt="Logo CF" /></Link>
                 </div>
                 </div>
                
