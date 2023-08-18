@@ -16,7 +16,7 @@ const CajaSobre = styled.div`
     margin-top: 2rem;
 `
 
-const H2Descripcion = styled.h2`
+export const H2Descripcion = styled.h2`
     text-align: center;
 `
 

@@ -1,12 +1,12 @@
 import Encriptador from "../../assets/images/encriptador.png"
 import { Link } from "react-router-dom"
-import {CajaPrincipal} from "../SobreMi"
+import {CajaPrincipal, H2Descripcion} from "../SobreMi"
 
 
 const Experiencia = () => {
     return (
         <CajaPrincipal>
-            <h2>Experiencia profesional</h2>
+            <H2Descripcion>Experiencia profesional</H2Descripcion>
             <div>
                 <img src={Encriptador} alt="Foto Encriptador" />
                 <Link to="https://github.com/Cfonta1986/challenge-encriptador">Repositorio</Link>

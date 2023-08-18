@@ -6,7 +6,7 @@ import FotoReact from "../../assets/images/react_icon_grande.png"
 import FotoPython from "../../assets/images/python.png"
 import FotoSQL from "../../assets/images/servidor-sql.png"
 import FotoGit from "../../assets/images/git.png"
-import {CajaPrincipal} from "../SobreMi"
+import {CajaPrincipal, H2Descripcion} from "../SobreMi"
 import styled from "styled-components"
 
 
@@ -26,6 +26,7 @@ const CajaSkill = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
   margin-right: 2rem;
+  margin-top: 2rem;
 
   &:hover {
     transform: scale(1.05);
@@ -36,7 +37,7 @@ const CajaSkill = styled.div`
 const Skills = () => {
     return (
         <CajaPrincipal>
-            <h2>Skills</h2>
+            <H2Descripcion>Skills</H2Descripcion>
             <CajaSkills>
                 <CajaSkill>
                     <img src={FotoHtml} alt="Foto HTML" />

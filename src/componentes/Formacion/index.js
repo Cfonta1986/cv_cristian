@@ -2,7 +2,7 @@ import styled from "styled-components";
 import FotoAlura from "../../assets/images/alura_logo.png"
 import FotoGoogle from "../../assets/images/google2.png"
 import FotoArgProg from "../../assets/images/arg_prog.png"
-import {CajaPrincipal} from "../SobreMi"
+import {CajaPrincipal, H2Descripcion} from "../SobreMi"
 
 const CajaCursos = styled.div`
     display: flex;
@@ -14,7 +14,7 @@ const Formacion = () => {
     return (
         <CajaPrincipal>
             <div>
-                <h2>Formación académica</h2>
+                <H2Descripcion>Formación académica</H2Descripcion>
             </div>
             <CajaCursos>
                 <div>
