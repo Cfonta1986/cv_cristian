@@ -21,7 +21,7 @@ export const CajaSkill = styled.div`
   height: 100px;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: ${ ({ theme }) => theme.inside };
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;

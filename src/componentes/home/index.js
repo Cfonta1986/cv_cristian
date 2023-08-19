@@ -1,3 +1,4 @@
+import Hola from "../Hola"
 import SobreMi from "../SobreMi";
 import Skills from "../Skills";
 import Formacion from "../Formacion";
@@ -14,6 +15,7 @@ const CajaHome = styled.div`
 function Home() {
     return(
         <CajaHome>
+            <Hola />
             <SobreMi />
             <Skills />
             <Formacion />

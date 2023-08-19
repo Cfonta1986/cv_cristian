@@ -24,7 +24,7 @@ const vibrar = keyframes`
 const CajaHeader = styled.div`
     display: flex;
     justify-content: space-around;
-    background-color: white;
+    background-color: ${ ({ theme }) => theme.inside };
     margin-bottom: 2rem;
     box-shadow: 0 4px 8px rgba(0,0,0,.4);
     width: 100%;

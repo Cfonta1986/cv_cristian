@@ -13,6 +13,7 @@ const CajaCursos = styled.div`
 const CajaFormacion = styled(CajaSkill)`
     height: 300px;
     width: 380px;
+    background-color: ${ ({ theme }) => theme.inside };
 `
 
 
