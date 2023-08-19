@@ -16,7 +16,7 @@ const CajaSkills = styled(CajaPrincipal)`
     flex-wrap: wrap;
 `
 
-const CajaSkill = styled.div`
+export const CajaSkill = styled.div`
   width: 200px;
   height: 100px;
   display: flex;

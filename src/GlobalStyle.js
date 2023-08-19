@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         text-decoration: none;
+        background-color: ${ ({ theme }) => theme.inside };
+        color: ${ ({theme}) => theme.text };
     }
     *:hover{
         transition: all 1s ease-out;

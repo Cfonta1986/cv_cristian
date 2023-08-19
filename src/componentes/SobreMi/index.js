@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import FotoGitHub from "../../assets/images/github.png"
 import FotoLinkedIn from "../../assets/images/linkedin.png"
 import FotoLogoCF from "../../assets/images/LOGO_CF_limpio_ch.png"
+import Curriculum from "../../assets/docs/cristian_fontanini.pdf"
 
 
 
@@ -31,6 +32,27 @@ const TextoDescripcion = styled.p`
 `
 
 
+const ArchivoDescarga = () => {
+  return (
+    <a href= {Curriculum} download>
+      <img src={FotoLogoCF} alt="Curriculum CF" />
+    </a>
+  );
+};
+
+export const Links = () => {
+    return (
+        <div>
+            <Link to="https://www.linkedin.com/in/cristian-fontanini/"><img src={FotoLinkedIn} alt="Foto LikedIn"/></Link>
+            <Link to="https://github.com/Cfonta1986"><img src={FotoGitHub} alt="Foto GitHub"/></Link>
+            <ArchivoDescarga />
+        </div>
+    );
+};
+
+
+
+
 const SobreMi = () => {
     return (
         <CajaPrincipal>
@@ -41,11 +63,7 @@ const SobreMi = () => {
                 <div>
                     <h1>Hola!!! Mi nombre es Cristián Fontanini.</h1>
                     <TextoDescripcion>Construyo PAGINAS WEB, me encanta la DATA SCIENCE y soy bombero. Me formé en Marketing Digital en Google Activate, Diseño de Páginas Web con Wordpress, Desarrollador FRONT-END y Python para Data Science en Alura / Oracle y Argentina Programa 4.0. </TextoDescripcion>
-                     <div>
-                    <Link to="https://www.linkedin.com/in/cristian-fontanini/"><img src={FotoLinkedIn} alt="Foto LikedIn"/></Link>
-                    <Link to="https://github.com/Cfonta1986"><img src={FotoGitHub} alt="Foto GitHub"/></Link>
-                    <Link to="#"><img src={FotoLogoCF} alt="Logo CF" /></Link>
-                </div>
+                <Links />
                 </div>
                
             </CajaFotoH3>

@@ -49,7 +49,7 @@ export const Detalle = styled.span`
     font-size: 24px;
 `
 
-export const BtnTema = styled.div`
+const BtnTema = styled.div`
     position: absolute;
     top: 4vh;
     right: 20px;
@@ -57,3 +57,5 @@ export const BtnTema = styled.div`
     border: none;
     cursor: pointer;
 `
+
+export default BtnTema;
