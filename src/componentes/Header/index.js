@@ -31,6 +31,7 @@ const CajaHeader = styled.div`
 	left: 0;
 	top: 0;
 	position: fixed; 
+    z-index: 9998;
 `
 
 const NombreTitulo = styled.h1`
@@ -74,6 +75,7 @@ const Header = () => {
                 <LinkMenu><Link to="#">Formación</Link></LinkMenu>
                 <LinkMenu><Link to="#">Proyectos</Link></LinkMenu>
                 <LinkMenu><Link to="#">cristianfonta16@gmail.com</Link></LinkMenu>
+                
             </CajaMenu>
         </CajaHeader>
     )

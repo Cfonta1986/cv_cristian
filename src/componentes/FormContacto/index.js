@@ -6,16 +6,18 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'; 
 
 
-
 export const CajaForm = styled.form`
   display: flex;
   flex-direction: column;
 `
 
 const NuevoInput = styled(Input)`
+  margin-bottom: 1rem;
   background-color: ${ ({ theme }) => theme.inside };
   color: ${ ({theme}) => theme.text };
 `
+
+
 
 
  const FormContacto =  () => {
@@ -30,7 +32,7 @@ const NuevoInput = styled(Input)`
       <NuevoInput  aria-label="Asunto" type="text" placeholder="Asunto" {...register("Asunto", {required:true, min: 2})} />
       <TextField name="Mensaje" label="Mensaje" multiline rows={2} variant="outlined" {...register("Mensaje", { required: true })} />
 
-      <Button type="submit" variant="contained">Submit</Button>
+      <Button type="submit" size="large" variant="contained">Submit</Button>
     </CajaForm>
   );
 }

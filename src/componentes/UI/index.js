@@ -33,6 +33,8 @@ const BtnTema = styled.div`
     background-color: inherit;
     border: none;
     cursor: pointer;
+    position: fixed; 
+    z-index: 9999;
 `
 
 export default BtnTema;
