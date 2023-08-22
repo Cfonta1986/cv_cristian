@@ -14,11 +14,14 @@ const CajaSobre = styled.div`
 
 export const H2Descripcion = styled.h2`
     text-align: center;
+    font-size: 40px;
 `
 
 export const TextoDescripcion = styled.p`
+margin-top: 2rem;
     font-style: italic;
     font-weight: bold;
+    font-size: 26px;
 `
 
 

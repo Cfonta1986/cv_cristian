@@ -26,7 +26,7 @@ export const CajaSkill = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s, box-shadow 0.2s;
   margin-right: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   &:hover {
     transform: scale(1.05);

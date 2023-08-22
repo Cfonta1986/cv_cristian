@@ -6,6 +6,7 @@ import { CajaPrincipal, H2Descripcion } from "../SobreMi";
 export const CajaTelefono = styled.div`
     display: flex;
     justify-content: space-around;
+    margin-top: 2rem;
 `
 
 
