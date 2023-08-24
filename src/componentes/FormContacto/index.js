@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import styled from "styled-components";
 import Input from '@mui/material/Input';
 import Button from '@mui/material/Button';
+import { purple } from '@mui/material/colors';
 
 export const CajaForm = styled.form`
   display: flex;
@@ -15,7 +16,12 @@ const NuevoInput = styled(Input)`
   color: ${ ({theme}) => theme.text };
 `
 
-const FormContacto = () => {
+const ColorButton = styled.button(({ theme }) => ({
+  color: theme.text ,
+  backgroundColor: theme.inside
+}));
+
+  const FormContacto = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -24,9 +30,9 @@ const FormContacto = () => {
       <NuevoInput aria-label="Nombre" type="text" placeholder="Nombre" {...register("Nombre", { required: true, min: 2 })} />
       <NuevoInput aria-label="E-Mail" type="email" placeholder="E-Mail" {...register("EMail", { required: true })} />
       <NuevoInput aria-label="Asunto" type="text" placeholder="Asunto" {...register("Asunto", { required: true, min: 2 })} />
-      <textarea aria-label="Mensaje" label="Mensaje" multiline {...register("Mensaje", { required: true })} />
+      <textarea aria-label="Mensaje" label="Mensaje" placeholder="Mensaje" multiline {...register("Mensaje", { required: true })} />
 
-      <Button type="submit" size="large" variant="contained">Submit</Button>
+      <ColorButton type="submit" size="large" variant="contained">Enviar</ColorButton>
     </CajaForm>
   );
 }
