@@ -18,8 +18,6 @@ const NuevoInput = styled(Input)`
 `
 
 
-
-
  const FormContacto =  () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
@@ -30,7 +28,7 @@ const NuevoInput = styled(Input)`
       <NuevoInput  aria-label="Nombre" type="text" placeholder="Nombre" {...register("Nombre", {required: true, min: 2})} />
       <NuevoInput  aria-label="E-Mail" type="email" placeholder="E-Mail" {...register("EMail", {required: true})} />
       <NuevoInput  aria-label="Asunto" type="text" placeholder="Asunto" {...register("Asunto", {required:true, min: 2})} />
-      <TextField name="Mensaje" label="Mensaje" multiline rows={2} variant="outlined" {...register("Mensaje", { required: true })} />
+      <TextField aria-label="Mensaje" label="Mensaje" multiline {...register("Mensaje", { required: true })} />
 
       <Button type="submit" size="large" variant="contained">Submit</Button>
     </CajaForm>

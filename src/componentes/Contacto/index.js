@@ -9,6 +9,11 @@ export const CajaTelefono = styled.div`
     margin-top: 2rem;
 `
 
+const FotoContacto = styled.img`
+    width: 300px;
+    height: 400px;
+`
+
 
 const Contacto = () => {
     return (
@@ -17,7 +22,7 @@ const Contacto = () => {
                 <H2Descripcion>Contacto</H2Descripcion>
             </div>
             <CajaTelefono>
-                <img src={FotoTelefono} alt="Foto telefono de contacto" />
+                <FotoContacto src={FotoTelefono} alt="Foto telefono de contacto" />
                 <FormContacto />
             </CajaTelefono>
         </CajaPrincipal>
