@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import FotoAlura from "../../assets/images/alura_logo.png"
 import FotoGoogle from "../../assets/images/google2.png"
-import FotoArgProg from "../../assets/images/arg_prog.png"
+import FotoArgProg from "../../assets/images/arg_prog2.png"
 import {CajaPrincipal, H2Descripcion} from "../SobreMi"
 import {CajaSkill} from "../Skills"
 
