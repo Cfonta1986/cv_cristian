@@ -37,8 +37,8 @@ const ContainedButton = styled.button`
 
   return (
     <CajaForm onSubmit={handleSubmit(onSubmit)}>
-      <NuevoInput aria-label="Nombre" type="text" placeholder="Nombre" multiline {...register("Nombre", { required: true, min: 2 })} />
-      <NuevoInput type="email" placeholder="E-Mail" multiline {...register("EMail", { required: true })} />
+      <NuevoInput aria-label="Nombre" autoComplete="name" type="text" placeholder="Nombre" multiline {...register("Nombre", { required: true, min: 2 })} />
+      <NuevoInput type="email" autoComplete="email" placeholder="E-Mail" multiline {...register("EMail", { required: true })} />
       <NuevoInput aria-label="Asunto" type="text" placeholder="Asunto" multiline {...register("Asunto", { required: true, min: 2 })} />
       <NuevoInput aria-label="Mensaje" label="Mensaje" placeholder="Mensaje" multiline {...register("Mensaje", { required: true })} />
 
