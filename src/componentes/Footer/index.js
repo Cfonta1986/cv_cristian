@@ -21,7 +21,7 @@ const FooterP = styled.p`
 const Footer = () => {
     return (
         <CajaFooter>
-            <FooterP>2023 - Cristián Fontanini ©</FooterP>
+            <FooterP>2023 - Cristián Fontanini - ©</FooterP>
         </CajaFooter>
     )
 }
