@@ -19,7 +19,7 @@ const CajaFormacion = styled(CajaSkill)`
 
 const Formacion = () => {
     return (
-        <CajaPrincipal>
+        <CajaPrincipal id="formacion">
             <div>
                 <H2Descripcion>Formación académica</H2Descripcion>
             </div>

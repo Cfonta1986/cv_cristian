@@ -60,7 +60,7 @@ const LinkMenu = styled.li`
 
     &:hover {
         cursor: pointer;
-        transform: scale(1.2);
+        transform: skew(20deg);
     }
 `
 
@@ -70,12 +70,11 @@ const Header = () => {
         <CajaHeader>
             <NombreTitulo>Cristián Fontanini</NombreTitulo>
             <CajaMenu>
-                <LinkMenu><Link to="#">Sobre mi</Link></LinkMenu>
-                <LinkMenu><Link to="#">Skills</Link></LinkMenu>
-                <LinkMenu><Link to="#">Formación</Link></LinkMenu>
-                <LinkMenu><Link to="#">Proyectos</Link></LinkMenu>
-                <LinkMenu><Link to="#">cristianfonta16@gmail.com</Link></LinkMenu>
-                
+                <LinkMenu><Link to="#sobre_mi">Sobre mi</Link></LinkMenu>
+                <LinkMenu><Link to="#skills">Skills</Link></LinkMenu>
+                <LinkMenu><Link to="#formacion">Formación</Link></LinkMenu>
+                <LinkMenu><Link to="#experiencia">Experiencia</Link></LinkMenu>
+                <LinkMenu><Link to="#">cristianfonta16@gmail.com</Link></LinkMenu>                
             </CajaMenu>
         </CajaHeader>
     )
