@@ -16,7 +16,7 @@ const NuevoInput = styled(Input)`
   color: ${ ({theme}) => theme.text };
 `
 
-const ContainedButton = styled.button`
+export const ContainedButton = styled.button`
   display: inline-block;
   padding: 10px 20px;
   background-color: #007bff;

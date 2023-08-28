@@ -3,6 +3,7 @@ import Encriptador from "../../assets/images/encriptador.png"
 import { Link } from "react-router-dom"
 import {CajaPrincipal, H2Descripcion} from "../SobreMi"
 import {CajaSkill} from "../Skills"
+import {ContainedButton} from "../FormContacto"
 
 
 const CajaPrincExperiencia = styled(CajaPrincipal)`
@@ -13,8 +14,8 @@ const CajaPrincExperiencia = styled(CajaPrincipal)`
 
 const CajaExperiencia = styled(CajaSkill)`
     margin-top: 3rem;
-    width: 400px;
-    height: 300px;
+    width: 60%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,8 +43,9 @@ const Experiencia = () => {
             <CajaExperiencia>
                 <img src={Encriptador} alt="Foto Encriptador" />
                 <div>
-                    <Link to="https://github.com/Cfonta1986/challenge-encriptador">Repositorio</Link>
-                    <Link to="https://cfonta1986.github.io/challenge-encriptador/">Ver DEMO</Link>
+                    <ContainedButton type="submit" size="large" variant="contained">Enviar</ContainedButton>
+                    <ContainedButton type="submit" size="large" variant="contained">Enviar</ContainedButton>
+                    
                 </div>                
             </CajaExperiencia>
         </CajaPrincExperiencia>
@@ -51,3 +53,7 @@ const Experiencia = () => {
 }
 
 export default Experiencia
+
+
+/*<Link to="https://github.com/Cfonta1986/challenge-encriptador">Repositorio</Link>
+                    <Link to="https://cfonta1986.github.io/challenge-encriptador/">Ver DEMO</Link>*/
