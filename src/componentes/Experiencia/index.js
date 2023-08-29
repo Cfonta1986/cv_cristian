@@ -38,7 +38,7 @@ const CajaExperiencia = styled(CajaSkill)`
 
 const Experiencia = () => {
     return (
-        <CajaPrincExperiencia>
+        <CajaPrincExperiencia id="experiencia">
             <H2Descripcion>Experiencia profesional</H2Descripcion>
             <CajaExperiencia>
                 <img src={Encriptador} alt="Foto Encriptador" />

@@ -30,7 +30,7 @@ margin-top: 2rem;
 
 const SobreMi = () => {
     return (
-        <CajaPrincipal>
+        <CajaPrincipal id="sobre_mi">
             
             <CajaSobre>
                 <H2Descripcion>Sobre mi</H2Descripcion>

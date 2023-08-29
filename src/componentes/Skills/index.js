@@ -34,42 +34,46 @@ export const CajaSkill = styled.div`
   }
 `;
 
+const H4Skills = styled.h4`
+    margin-top: .5rem;
+`
+
 const Skills = () => {
     return (
-        <CajaPrincipal>
+        <CajaPrincipal id="skills">
             <H2Descripcion>Skills</H2Descripcion>
             <CajaSkills>
                 <CajaSkill>
                     <img src={FotoHtml} alt="Foto HTML" />
-                    <h4>HTML</h4>
+                    <H4Skills>HTML</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoCss} alt="Foto CSS" />
-                    <h4>CSS</h4>
+                    <H4Skills>CSS</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoJs} alt="Foto JavaScript" />
-                    <h4>JavaScript</h4>
+                    <H4Skills>JavaScript</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoReact} alt="Foto React" />
-                    <h4>React</h4>
+                    <H4Skills>React</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoNode} alt="Foto Node JS" />
-                    <h4>Nodejs</h4>
+                    <H4Skills>Nodejs</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoSQL} alt="Foto SQL" />
-                    <h4>SQL</h4>
+                    <H4Skills>SQL</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoPython} alt="Foto Python" />
-                    <h4>Python</h4>
+                    <H4Skills>Python</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
                     <img src={FotoGit} alt="Foto Git" />
-                    <h4>Git</h4>
+                    <H4Skills>Git</H4Skills>
                 </CajaSkill>
             </CajaSkills>
         </CajaPrincipal>

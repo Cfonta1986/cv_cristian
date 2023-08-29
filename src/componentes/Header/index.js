@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll";
 import styled, { keyframes } from "styled-components"
 
 
@@ -64,17 +64,22 @@ const LinkMenu = styled.li`
     }
 `
 
+/*const linkActivo{
+    font-weight: bold;
+}*/
+
 
 const Header = () => {
+    
     return (
-        <CajaHeader>
-            <NombreTitulo>Cristián Fontanini</NombreTitulo>
+        <CajaHeader id="scrollToTop">
+            <Link to="scrollToTop" smooth={true} duration={1000} offset= {-100}><NombreTitulo>Cristián Fontanini</NombreTitulo></Link>
             <CajaMenu>
-                <LinkMenu><Link to="#sobre_mi">Sobre mi</Link></LinkMenu>
-                <LinkMenu><Link to="#skills">Skills</Link></LinkMenu>
-                <LinkMenu><Link to="#formacion">Formación</Link></LinkMenu>
-                <LinkMenu><Link to="#experiencia">Experiencia</Link></LinkMenu>
-                <LinkMenu><Link to="#">cristianfonta16@gmail.com</Link></LinkMenu>                
+                <LinkMenu><Link to="sobre_mi" smooth={true} duration={1000} offset= {-100} activeClassName="linkActivo" >Sobre mi</Link></LinkMenu>
+                <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Skills</Link></LinkMenu>
+                <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Formación</Link></LinkMenu>
+                <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Experiencia</Link></LinkMenu>
+                <LinkMenu><Link to="*" >cristianfonta16@gmail.com</Link></LinkMenu>                
             </CajaMenu>
         </CajaHeader>
     )
