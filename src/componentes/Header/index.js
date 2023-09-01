@@ -1,5 +1,6 @@
-import { Link } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 import styled, { keyframes } from "styled-components"
+import "../../assets/css/style.css"
 
 
 const vibrar = keyframes`
@@ -64,21 +65,21 @@ const LinkMenu = styled.li`
     }
 `
 
-/*const linkActivo{
-    font-weight: bold;
-}*/
 
+const scrollArriba = () => {
+    animateScroll.scrollToTop();
+  }
 
-const Header = () => {
-    
+   
+const Header = () => {    
     return (
         <CajaHeader id="scrollToTop">
-            <Link to="scrollToTop" smooth={true} duration={1000} offset= {-100}><NombreTitulo>Cristián Fontanini</NombreTitulo></Link>
+            <Link to="scrollToTop" smooth={true} duration={1000} onClick={scrollArriba} ><NombreTitulo>Cristián Fontanini</NombreTitulo></Link>
             <CajaMenu>
-                <LinkMenu><Link to="sobre_mi" smooth={true} duration={1000} offset= {-100} activeClassName="linkActivo" >Sobre mi</Link></LinkMenu>
-                <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Skills</Link></LinkMenu>
-                <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Formación</Link></LinkMenu>
-                <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClassName="linkActivo" >Experiencia</Link></LinkMenu>
+                <LinkMenu ><Link to="sobre_mi" smooth={true} duration={1000} offset= {-100} activeClass="linkActivo" >Sobre mi</Link></LinkMenu>
+                <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Skills</Link></LinkMenu>
+                <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Formación</Link></LinkMenu>
+                <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
                 <LinkMenu><Link to="*" >cristianfonta16@gmail.com</Link></LinkMenu>                
             </CajaMenu>
         </CajaHeader>
