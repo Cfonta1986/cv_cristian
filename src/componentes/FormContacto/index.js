@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from "styled-components";
 import Input from '@mui/material/Input';
@@ -33,14 +33,81 @@ export const ContainedButton = styled.button`
 
   const FormContacto = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('https://formsubmit.co/e67410cbb2350d207b4c820f75d0f18c', {
+        method: 'POST',
+        body: new URLSearchParams(data),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+
+      if (response.ok) {
+        console.log('Formulario enviado exitosamente.');
+      } else {
+        console.error('Error al enviar el formulario.');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    }
+  };
+
+  const [inputError, setInputError] = useState({
+    nombre: false,
+    eMail: false,
+    asunto: false,
+    mensaje: false,
+  });
+
+  const handleBlur = (nombreInput) => {
+    setInputError(prevState => ({
+      ...prevState,
+      [nombreInput]: errors[nombreInput] ? true : false,
+    }));
+  };
 
   return (
     <CajaForm onSubmit={handleSubmit(onSubmit)}>
-      <NuevoInput aria-label="Nombre" autoComplete="name" type="text" placeholder="Nombre" multiline {...register("Nombre", { required: true, min: 2 })} />
-      <NuevoInput type="email" autoComplete="email" placeholder="E-Mail" multiline {...register("EMail", { required: true })} />
-      <NuevoInput aria-label="Asunto" type="text" placeholder="Asunto" multiline {...register("Asunto", { required: true, min: 2 })} />
-      <NuevoInput aria-label="Mensaje" label="Mensaje" placeholder="Mensaje" multiline {...register("Mensaje", { required: true })} />
+      <NuevoInput 
+        aria-label="Nombre" 
+        autoComplete="name" 
+        type="text" 
+        placeholder="Nombre"
+        multiline 
+        {...register("nombre", { required: true, minLength: 3 })}
+        error={inputError.nombre}
+        onBlur={() => handleBlur("nombre")} 
+      />
+      <NuevoInput 
+        type="email" 
+        autoComplete="email" 
+        placeholder="E-Mail" 
+        multiline 
+        {...register("eMail", { required: true, pattern: {
+          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+          message: "Dirección de E-Mail no válida",
+        }, })} 
+        error={inputError.eMail}
+        onBlur={() => handleBlur("eMail")} />
+      <NuevoInput 
+        aria-label="Asunto" 
+        type="text" 
+        placeholder="Asunto" 
+        multiline 
+        {...register("asunto", { required: true, minLength: 3 })}
+        error={inputError.asunto}
+        onBlur={() => handleBlur("asunto")} 
+      />
+      <NuevoInput 
+        aria-label="Mensaje" 
+        label="Mensaje" 
+        placeholder="Mensaje" 
+        multiline 
+        {...register("mensaje", { required: true, minLength: 3 })}
+        error={inputError.mensaje}
+        onBlur={() => handleBlur("mensaje")} 
+      />
 
       <ContainedButton type="submit" size="large" variant="contained">Enviar</ContainedButton>
     </CajaForm>
