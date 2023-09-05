@@ -31,27 +31,28 @@ export const ContainedButton = styled.button`
   }
 `;
 
-  const FormContacto = () => {
+const FormContacto = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = async (data) => {
-    try {
-      const response = await fetch('https://formsubmit.co/e67410cbb2350d207b4c820f75d0f18c', {
-        method: 'POST',
-        body: new URLSearchParams(data),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      });
-
-      if (response.ok) {
-        console.log('Formulario enviado exitosamente.');
-      } else {
-        console.error('Error al enviar el formulario.');
+  try {
+    // Enviar los datos al servidor
+    const response = await fetch('https://formsubmit.co/cristianfonta16@gmail.com', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
       }
-    } catch (error) {
-      console.error('Error al enviar el formulario:', error);
+    });
+
+    if (response.ok) {
+      console.log('Formulario enviado exitosamente.', response, JSON.stringify(data));
+    } else {
+      console.error('Error al enviar el formulario.');
     }
-  };
+  } catch (error) {
+    console.error('Error al enviar el formulario:', error);
+  }
+};
 
   const [inputError, setInputError] = useState({
     nombre: false,
@@ -75,6 +76,7 @@ export const ContainedButton = styled.button`
         type="text" 
         placeholder="Nombre"
         multiline 
+        name="Nombre"
         {...register("nombre", { required: true, minLength: 3 })}
         error={inputError.nombre}
         onBlur={() => handleBlur("nombre")} 
@@ -84,6 +86,7 @@ export const ContainedButton = styled.button`
         autoComplete="email" 
         placeholder="E-Mail" 
         multiline 
+        name="email"
         {...register("eMail", { required: true, pattern: {
           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
           message: "Dirección de E-Mail no válida",
@@ -95,6 +98,7 @@ export const ContainedButton = styled.button`
         type="text" 
         placeholder="Asunto" 
         multiline 
+        name="Asunto"
         {...register("asunto", { required: true, minLength: 3 })}
         error={inputError.asunto}
         onBlur={() => handleBlur("asunto")} 
@@ -104,6 +108,7 @@ export const ContainedButton = styled.button`
         label="Mensaje" 
         placeholder="Mensaje" 
         multiline 
+        name="Mensaje"
         {...register("mensaje", { required: true, minLength: 3 })}
         error={inputError.mensaje}
         onBlur={() => handleBlur("mensaje")} 
