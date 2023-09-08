@@ -36,6 +36,7 @@ const CajaHeader = styled.div`
 
     @media (max-width: 803px) {
         flex-direction: column;
+        align-items: center;
   }
 `
 

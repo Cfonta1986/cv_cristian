@@ -7,13 +7,18 @@ import {CajaSkill} from "../Skills"
 
 const CajaCursos = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const CajaFormacion = styled(CajaSkill)`
     height: 300px;
-    width: 380px;
+    width: 350px;
     background-color: ${ ({ theme }) => theme.inside };
+`
+
+const TituloInstitucion = styled.h3`
+    margin-top: 1rem;
 `
 
 
@@ -26,28 +31,28 @@ const Formacion = () => {
             <CajaCursos>
                 <CajaFormacion>
                     <img src={FotoAlura} alt="Foto Alura" />
-                    <h5>Formacion Principiante en Programación. </h5>
-                    <h5>Formacion Business Agility. </h5>
-                    <h5>Formacion HTML y CSS. </h5>
-                    <h5>Formacion en React. </h5>
-                    <h5>Formacion SQL con MySQL. </h5>
-                    <h5>Formacion SQL con MySQL Server de Oracle. </h5>
-                    <h5>Formacion Oracle Cloud Infraestructure. </h5>
-                    <h5>Formacion Python, Data Science en OCI y Oracle Analytics. </h5>
-                    <p>2022 / 2023 - Alura/Oracle</p>
+                    <h5>Principiante en Programación.</h5>
+                    <h5>Business Agility.</h5>
+                    <h5>HTML y CSS.</h5>
+                    <h5>React.</h5>
+                    <h5>SQL con MySQL.</h5>
+                    <h5>SQL con MySQL Server de Oracle.</h5>
+                    <h5>Oracle Cloud Infraestructure.</h5>
+                    <h5>Python, Data Science en OCI y Oracle Analytics.</h5>
+                    <TituloInstitucion>2022 / 2023 - Alura/Oracle</TituloInstitucion>
                 </CajaFormacion>
                 <CajaFormacion>
                     <img src={FotoArgProg} alt="Foto Argentina Programa 4.0" />
                     <h5>Principiante en Programación.</h5>
                     <h5>Procesamiento de datos con Python.</h5>
-                    <p>2022 / 2023 - Argentina Programa 4.0</p>
+                    <TituloInstitucion>2022 / 2023 - Argentina Programa 4.0</TituloInstitucion>
                 </CajaFormacion>
                 <CajaFormacion>
                     <img src={FotoGoogle} alt="Foto Google" />
                     <h5>Introducción al Marketing Digital.</h5>
                     <h5>Desarrollo de Apps Móviles.</h5>
                     <h5>Comercio Electrónico.</h5>
-                    <p>2018 - Google Activate</p>
+                    <TituloInstitucion>2018 - Google Activate</TituloInstitucion>
                 </CajaFormacion>
             </CajaCursos>
         </CajaPrincipal>

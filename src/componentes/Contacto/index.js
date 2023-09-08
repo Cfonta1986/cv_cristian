@@ -12,6 +12,9 @@ export const CajaTelefono = styled.div`
 const FotoContacto = styled.img`
     width: 300px;
     height: 400px;
+    @media (max-width: 730px) {
+        display: none;
+  }
 `
 
 

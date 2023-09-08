@@ -41,6 +41,12 @@ const LinkIndividual = styled.a`
     margin-top: 2rem;
 `
 
+const DivImg= styled.div`
+    @media (max-width: 803px) {
+        display: none;
+  }
+`
+
 
 const ArchivoDescarga = () => {
     return (
@@ -70,9 +76,9 @@ const Hola = () => {
     return (
         <CajaHola>
             <CajaFotoH3>
-                <div>
+                <DivImg>
                     <img src={Foto_cv} alt="Foto de Cristian Fontanini"/>
-                </div>
+                </DivImg>
                 <CajaTitulo>
                     <TituloPrincipal>Hola!!! <br /> Mi nombre es Cristián Fontanini.</TituloPrincipal>
                     <ParrafoPrincipal>Construyo PAGINAS WEB, me encanta la DATA SCIENCE y soy bombero. Me formé en Marketing Digital en Google Activate, Diseño de Páginas Web con Wordpress, Desarrollador FRONT-END y Python para Data Science en Alura / Oracle y Argentina Programa 4.0. </ParrafoPrincipal>

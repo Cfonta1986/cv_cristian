@@ -8,6 +8,7 @@ export const CajaForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 25rem;
+  margin-left: 1rem;
 `
 
 const NuevoInput = styled(Input)`
