@@ -39,7 +39,7 @@ const NombreTitulo = styled.h1`
     margin-left: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    animation: ${vibrar} 1.2s infinite linear alternate;
+    animation: ${vibrar} 1.3s infinite linear alternate;
 
     &:hover {
         cursor: pointer;
@@ -70,6 +70,14 @@ const scrollArriba = () => {
     animateScroll.scrollToTop();
   }
 
+const Mailto = ({ email, subject = '', body = '', nombreMail }) => {
+    let params = subject || body ? '?' : '';
+    if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+  
+    return <a href={`mailto:${email}${params}`}>{nombreMail}</a>;
+  };
+
    
 const Header = () => {    
     return (
@@ -80,7 +88,7 @@ const Header = () => {
                 <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Skills</Link></LinkMenu>
                 <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Formación</Link></LinkMenu>
                 <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
-                <LinkMenu><Link to="*" >cristianfonta16@gmail.com</Link></LinkMenu>                
+                <LinkMenu><Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">E-Mail</Mailto></LinkMenu>                
             </CajaMenu>
         </CajaHeader>
     )
