@@ -33,6 +33,10 @@ const CajaHeader = styled.div`
 	top: 0;
 	position: fixed; 
     z-index: 9998;
+
+    @media (max-width: 803px) {
+        flex-direction: column;
+  }
 `
 
 const NombreTitulo = styled.h1`
@@ -70,12 +74,12 @@ const scrollArriba = () => {
     animateScroll.scrollToTop();
   }
 
-const Mailto = ({ email, subject = '', body = '', nombreMail }) => {
+  const Mailto = ({ email, subject = '', body = '', children }) => {
     let params = subject || body ? '?' : '';
     if (subject) params += `subject=${encodeURIComponent(subject)}`;
     if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
   
-    return <a href={`mailto:${email}${params}`}>{nombreMail}</a>;
+    return <a href={`mailto:${email}${params}`}>{children}</a>;
   };
 
    
