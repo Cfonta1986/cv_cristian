@@ -2,7 +2,7 @@
 
 ## Tecnología usada
 
-Página realizada con *ReactJS* utilizando las siguientes librerias:
+* Página realizada con *ReactJS* utilizando las siguientes librerias:
 
     * Axios
     * React-dom
