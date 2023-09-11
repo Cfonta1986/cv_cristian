@@ -1,8 +1,8 @@
 import { Link, animateScroll } from "react-scroll";
 import styled, { keyframes } from "styled-components"
 import "../../assets/css/style.css"
-import BtnCerrar from "../../assets/images/boton-cerrar.svg"
 import BtnMenu from "../../assets/images/btn-menu.svg"
+import { useState } from "react";
 
 
 
@@ -68,22 +68,20 @@ const CajaMenu2 = styled.ul`
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
-    @media (min-width: 500px) {
-        display:none;
-  }
+    flex-direction: column;
+    align-items: start;
+    margin-right: 30vh;
+    margin-bottom: 1rem;
 `
 
-const Cerrando = styled.img`
-    width: 20px;
-    height: 20px;
-    @media (min-width: 500px) {
-        display:none;
-  }
-`
 
 const AbrirMenu = styled.img`
-    width: 20px;
-    height: 20px;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    top: 80%;
+    left: 80%;
+    
     @media (min-width: 500px) {
         display:none;
   }
@@ -113,8 +111,46 @@ const scrollArriba = () => {
     return <a href={`mailto:${email}${params}`}>{children}</a>;
   };
 
+
+const MenuCelular = () => {
+  return (
+    <CajaMenu2>
+      <LinkMenu>
+        <Link to="sobre_mi" smooth={true} duration={1000} offset={-310} activeClass="linkActivo">
+          Sobre mi
+        </Link>
+      </LinkMenu>
+      <LinkMenu>
+        <Link to="skills" smooth={true} duration={1000} offset={-310} activeClass="linkActivo">
+          Skills
+        </Link>
+      </LinkMenu>
+      <LinkMenu>
+        <Link to="formacion" smooth={true} duration={1000} offset={-310} activeClass="linkActivo">
+          Formación
+        </Link>
+      </LinkMenu>
+      <LinkMenu>
+        <Link to="experiencia" smooth={true} duration={1000} offset={-310} activeClass="linkActivo">
+          Experiencia
+        </Link>
+      </LinkMenu>
+      <LinkMenu>
+        <Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">
+          E-Mail
+        </Mailto>
+      </LinkMenu>
+    </CajaMenu2>
+  );
+};
+
    
-const Header = () => {    
+const Header = () => {   
+    const [MenuVisible, SetMenuVisible] = useState(false);
+
+    const handleAbrirMenu = () => {
+        SetMenuVisible(!MenuVisible);
+    };
     return (
         <CajaHeader id="scrollToTop">
             <Link to="scrollToTop" smooth={true} duration={1000} onClick={scrollArriba} ><NombreTitulo>Cristián Fontanini</NombreTitulo></Link>
@@ -125,15 +161,9 @@ const Header = () => {
                 <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
                 <LinkMenu><Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">E-Mail</Mailto></LinkMenu>                
             </CajaMenu>
-            <CajaMenu2>
-                <LinkMenu ><Link to="sobre_mi" smooth={true} duration={1000} offset= {-100} activeClass="linkActivo" >Sobre mi</Link></LinkMenu>
-                <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Skills</Link></LinkMenu>
-                <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Formación</Link></LinkMenu>
-                <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
-                <LinkMenu><Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">E-Mail</Mailto></LinkMenu>                
-            </CajaMenu2>
-            <Cerrando src={BtnCerrar} alt="Botón cerrar" />
-            <AbrirMenu src={BtnMenu} alt="Botón menú" />
+            
+            <AbrirMenu src={BtnMenu} alt="Botón menú" onClick={handleAbrirMenu} />
+            {MenuVisible && <MenuCelular />}
         </CajaHeader>
     )
 }
