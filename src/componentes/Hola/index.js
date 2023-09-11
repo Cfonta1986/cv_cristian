@@ -34,6 +34,9 @@ const CajaTitulo = styled.div`
 const CajaLinks = styled.div`
     display: flex;
     flex-direction: row-reverse;
+    @media (max-width: 500px) {
+        align-items: center;
+  }
 `
 
 const LinkIndividual = styled.a`

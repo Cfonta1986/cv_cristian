@@ -1,6 +1,9 @@
 import { Link, animateScroll } from "react-scroll";
 import styled, { keyframes } from "styled-components"
 import "../../assets/css/style.css"
+import BtnCerrar from "../../assets/images/boton-cerrar.svg"
+import BtnMenu from "../../assets/images/btn-menu.svg"
+
 
 
 const vibrar = keyframes`
@@ -56,7 +59,34 @@ const CajaMenu = styled.ul`
     display: flex;
     justify-content: flex-end;
     margin-top: 1rem;
+    @media (max-width: 500px) {
+        display:none;
+  }
+`
 
+const CajaMenu2 = styled.ul`
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    @media (min-width: 500px) {
+        display:none;
+  }
+`
+
+const Cerrando = styled.img`
+    width: 20px;
+    height: 20px;
+    @media (min-width: 500px) {
+        display:none;
+  }
+`
+
+const AbrirMenu = styled.img`
+    width: 20px;
+    height: 20px;
+    @media (min-width: 500px) {
+        display:none;
+  }
 `
 
 const LinkMenu = styled.li`
@@ -95,6 +125,15 @@ const Header = () => {
                 <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
                 <LinkMenu><Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">E-Mail</Mailto></LinkMenu>                
             </CajaMenu>
+            <CajaMenu2>
+                <LinkMenu ><Link to="sobre_mi" smooth={true} duration={1000} offset= {-100} activeClass="linkActivo" >Sobre mi</Link></LinkMenu>
+                <LinkMenu><Link to="skills" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Skills</Link></LinkMenu>
+                <LinkMenu><Link to="formacion" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Formación</Link></LinkMenu>
+                <LinkMenu><Link to="experiencia" smooth={true} duration={1000} offset= {-100}  activeClass="linkActivo" >Experiencia</Link></LinkMenu>
+                <LinkMenu><Mailto email="cristianfonta16@gmail.com" subject="Hola" body="Me interesa tu trabajo, quiero conocerte">E-Mail</Mailto></LinkMenu>                
+            </CajaMenu2>
+            <Cerrando src={BtnCerrar} alt="Botón cerrar" />
+            <AbrirMenu src={BtnMenu} alt="Botón menú" />
         </CajaHeader>
     )
 }
