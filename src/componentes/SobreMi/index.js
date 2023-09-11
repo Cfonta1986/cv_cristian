@@ -5,7 +5,18 @@ import styled  from "styled-components"
 export const CajaPrincipal = styled.div`
     width: 90%;
     margin: auto;
-    margin-top: 3rem;
+    @media (max-width: 485px) {
+        margin-top: 5rem;
+  }
+  @media (max-width: 400px) {
+        margin-top: 12rem;
+  }
+  @media (max-width: 335px) {
+        margin-top: 20rem;
+  }
+  @media (max-width: 308px) {
+        margin-top: 25rem;
+  }
 `
 
 const CajaSobre = styled.div`

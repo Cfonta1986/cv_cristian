@@ -70,8 +70,11 @@ const CajaMenu2 = styled.ul`
     margin-top: 1rem;
     flex-direction: column;
     align-items: start;
-    margin-right: 30vh;
+    margin-right: 20vh;
     margin-bottom: 1rem;
+    @media (min-width: 500px) {
+        display:none;
+  }
 `
 
 
@@ -84,6 +87,10 @@ const AbrirMenu = styled.img`
     
     @media (min-width: 500px) {
         display:none;
+  }
+    @media (max-width: 360px) {
+      top: 80%;
+      left: 70%;
   }
 `
 
