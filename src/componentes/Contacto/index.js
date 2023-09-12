@@ -1,7 +1,8 @@
 import FormContacto from "../FormContacto";
 import FotoTelefono from "../../assets/images/contact_image.png";
 import styled from "styled-components";
-import { CajaPrincipal, H2Descripcion } from "../SobreMi";
+import { H2Descripcion } from "../SobreMi";
+import { CajaPrincipal } from "../UI"
 
 export const CajaTelefono = styled.div`
     display: flex;

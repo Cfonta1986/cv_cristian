@@ -1,8 +1,9 @@
 import styled from "@emotion/styled"
 import Encriptador from "../../assets/images/encriptador.png"
-import {CajaPrincipal, H2Descripcion} from "../SobreMi"
+import {H2Descripcion} from "../SobreMi"
 import {CajaSkill} from "../Skills"
 import {ContainedButton} from "../FormContacto"
+import { CajaPrincipal } from "../UI"
 
 
 const CajaPrincExperiencia = styled(CajaPrincipal)`

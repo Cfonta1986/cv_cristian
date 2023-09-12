@@ -4,7 +4,7 @@ import FotoGitHub from "../../assets/images/github.png"
 import FotoLinkedIn from "../../assets/images/linkedin.png"
 import FotoLogoCF from "../../assets/images/LOGO_CF_limpio_ch.png"
 import Curriculum from "../../assets/docs/cristian_fontanini.pdf"
-import {CajaPrincipal} from "../SobreMi"
+import { CajaPrincipal, ParrafoPrincipal } from "../UI"
 
 
 const CajaHola = styled(CajaPrincipal)`
@@ -19,12 +19,6 @@ const CajaFotoH3 = styled.div`
 const TituloPrincipal = styled.h1`
     text-align: center;
     font-size: 60px;
-`
-
-export const ParrafoPrincipal = styled.p`
-    font-size: 30px;
-    margin-top: 4rem;
-    text-align: center;
 `
 
 const CajaTitulo = styled.div`
@@ -54,7 +48,7 @@ const DivImg= styled.div`
 const ArchivoDescarga = () => {
     return (
       <LinkIndividual href= {Curriculum} download>
-        <img src={FotoLogoCF} alt="Curriculum CF" />
+        <img src={FotoLogoCF} alt="Curriculum CF" title="Curriculum" />
       </LinkIndividual>
     );
   };
@@ -65,10 +59,10 @@ export const Links = () => {
     return (
         <CajaLinks>
             <LinkIndividual href="https://www.linkedin.com/in/cristian-fontanini/" target="_blank" rel="noopener noreferrer">
-                <img src={FotoLinkedIn} alt="Foto LikedIn"/>
+                <img src={FotoLinkedIn} alt="Foto LikedIn" title="LinkedIn"/>
             </LinkIndividual>
             <LinkIndividual href="https://github.com/Cfonta1986" target="_blank" rel="noopener noreferrer">
-                <img src={FotoGitHub} alt="Foto GitHub"/>
+                <img src={FotoGitHub} alt="Foto GitHub" title="GitHub" />
             </LinkIndividual>
             <ArchivoDescarga />
         </CajaLinks>
@@ -80,7 +74,7 @@ const Hola = () => {
         <CajaHola>
             <CajaFotoH3>
                 <DivImg>
-                    <img src={Foto_cv} alt="Foto de Cristian Fontanini"/>
+                    <img src={Foto_cv} alt="Foto de Cristian Fontanini" title="Cristian Fontanini" />
                 </DivImg>
                 <CajaTitulo>
                     <TituloPrincipal>Hola!!! <br /> Mi nombre es Cristián Fontanini.</TituloPrincipal>

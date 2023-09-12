@@ -6,8 +6,9 @@ import FotoReact from "../../assets/images/react_icon_grande.png"
 import FotoPython from "../../assets/images/python.png"
 import FotoSQL from "../../assets/images/servidor-sql.png"
 import FotoGit from "../../assets/images/git.png"
-import {CajaPrincipal, H2Descripcion} from "../SobreMi"
+import { H2Descripcion} from "../SobreMi"
 import styled from "styled-components"
+import { CajaPrincipal } from "../UI"
 
 
 const CajaSkills = styled(CajaPrincipal)`
