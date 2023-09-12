@@ -1,36 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import styled from "styled-components";
-import Input from '@mui/material/Input';
+import { CajaForm, NuevoInput, ContainedButton } from "../UI"
 
-
-export const CajaForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 25rem;
-  margin-left: 1rem;
-`
-
-const NuevoInput = styled(Input)`
-  margin-bottom: 1rem;
-  background-color: ${ ({ theme }) => theme.inside };
-  color: ${ ({theme}) => theme.text };
-`
-
-export const ContainedButton = styled.button`
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
 
 const FormContacto = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();

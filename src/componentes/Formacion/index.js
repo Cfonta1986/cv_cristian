@@ -1,26 +1,7 @@
-import styled from "styled-components";
 import FotoAlura from "../../assets/images/alura_logo.png"
 import FotoGoogle from "../../assets/images/google2.png"
 import FotoArgProg from "../../assets/images/arg_prog2.png"
-import {H2Descripcion} from "../SobreMi"
-import {CajaSkill} from "../Skills"
-import { CajaPrincipal } from "../UI"
-
-const CajaCursos = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-`
-
-const CajaFormacion = styled(CajaSkill)`
-    height: 300px;
-    width: 350px;
-    background-color: ${ ({ theme }) => theme.inside };
-`
-
-const TituloInstitucion = styled.h3`
-    margin-top: 1rem;
-`
+import { CajaPrincipal, H2Descripcion, CajaCursos, CajaFormacion, TituloInstitucion } from "../UI"
 
 
 const Formacion = () => {
