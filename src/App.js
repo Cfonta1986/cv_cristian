@@ -1,5 +1,6 @@
 import GlobalStyle from './GlobalStyle.js';
 import Home from './componentes/home';
+import Error404 from './componentes/Error404';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
@@ -26,6 +27,7 @@ function App() {
         </BtnTema>
         <Routes>
           <Route path='/' element={ <Home/> } />
+          <Route path='*' element={ <Error404/> } />
         </Routes>
         <Footer />
       </ThemeProvider>

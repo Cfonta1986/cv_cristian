@@ -4,13 +4,7 @@ import Skills from "../Skills";
 import Formacion from "../Formacion";
 import Experiencia from "../Experiencia";
 import Contacto from "../Contacto"
-import styled from "styled-components";
-
-
-const CajaHome = styled.div`
-    margin-top: 7rem;
-`
-
+import { CajaHome } from "../UI"
 
 function Home() {
     return(

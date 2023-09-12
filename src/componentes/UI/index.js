@@ -289,3 +289,7 @@ export const FotoContacto = styled.img`
         display: none;
   }
 `
+
+export const CajaHome = styled.div`
+    margin-top: 7rem;
+`
