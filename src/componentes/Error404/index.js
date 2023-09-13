@@ -1,9 +1,12 @@
-
+import E404 from "../../assets/images/error404.jpg";
+import { FotoError } from "../UI"
 
 
 function Error404() {
     return(
-        <div></div>
+        <div>
+            <FotoError src={E404} alt="Error 404" title="Ocurrió un error"/>
+        </div>
 );
 }
 

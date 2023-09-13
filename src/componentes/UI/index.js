@@ -293,3 +293,8 @@ export const FotoContacto = styled.img`
 export const CajaHome = styled.div`
     margin-top: 7rem;
 `
+
+export const FotoError = styled.img`
+    width: 50%;
+    height: 50%;
+` 

@@ -6,8 +6,8 @@ const SobreMi = () => {
         <CajaPrincipal id="sobre_mi">
             
             <CajaSobre>
-                <H2Descripcion>Sobre mi</H2Descripcion>
-                <TextoDescripcion>Con 36 años de edad y residencia en la ciudad de Rosario, Argentina, soy un apasionado por el emprendimiento y con una visión de negocio excepcional. Me siento atraído por los desafíos y poseo una naturaleza detallista y autodidacta que me impulsa constantemente a buscar oportunidades para el crecimiento personal y profesional.
+                <H2Descripcion>Sobre mí</H2Descripcion>
+                <TextoDescripcion>Soy Cristián, tengo 36 años, resido en la ciudad de Rosario, Argentina, soy un apasionado por el emprendimiento, con una visión de negocio excepcional. Me siento atraído por los desafíos y poseo una naturaleza detallista y autodidacta que me impulsa constantemente a buscar oportunidades para el crecimiento personal y profesional.
 
                 Mi enfoque principal está en el ámbito del Desarrollo Web y Data Science. Considero que el aprendizaje continuo es esencial y siempre estoy en busca de nuevas formas de expandir mi conjunto de habilidades. Mi objetivo primordial es contribuir y prosperar en un entorno laboral que fomente el desarrollo de proyectos innovadores y que esté alineado con mis valores y aspiraciones.
 
