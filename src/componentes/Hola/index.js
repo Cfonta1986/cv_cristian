@@ -4,50 +4,14 @@ import FotoGitHub from "../../assets/images/github.png"
 import FotoLinkedIn from "../../assets/images/linkedin.png"
 import FotoLogoCF from "../../assets/images/LOGO_CF_limpio_ch.png"
 import Curriculum from "../../assets/docs/cristian_fontanini.pdf"
-import { CajaPrincipal, ParrafoPrincipal } from "../UI"
+import { ParrafoPrincipal, CajaHola, CajaFotoH3, TituloPrincipal, CajaTitulo, CajaLinks, LinkIndividual, DivImg } from "../UI"
 
 
-const CajaHola = styled(CajaPrincipal)`
-    height: 90vh;
-`
-
-
-const CajaFotoH3 = styled.div`
-    display: flex;
-`
-
-const TituloPrincipal = styled.h1`
-    text-align: center;
-    font-size: 60px;
-`
-
-const CajaTitulo = styled.div`
-    margin-top: 3rem;
-`
-
-const CajaLinks = styled.div`
-    display: flex;
-    flex-direction: row-reverse;
-    @media (max-width: 500px) {
-        align-items: center;
-  }
-`
-
-const LinkIndividual = styled.a`
-    margin-left: 0.8rem;
-    margin-top: 2rem;
-`
-
-const DivImg= styled.div`
-    @media (max-width: 803px) {
-        display: none;
-  }
-`
 
 
 const ArchivoDescarga = () => {
     return (
-      <LinkIndividual href= {Curriculum} download>
+      <LinkIndividual href={Curriculum} download>
         <img src={FotoLogoCF} alt="Curriculum CF" title="Curriculum" />
       </LinkIndividual>
     );

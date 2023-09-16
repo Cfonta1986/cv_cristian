@@ -98,6 +98,7 @@ const vibrar = keyframes`
         transform: translateX(2px);
     }
 `;
+
 export const NombreTitulo = styled.h1`
     margin-left: 2rem;
     margin-top: 1rem;
@@ -298,3 +299,39 @@ export const FotoError = styled.img`
     width: 50%;
     height: 50%;
 ` 
+
+export const CajaHola = styled(CajaPrincipal)`
+    height: 90vh;
+`
+
+export const CajaFotoH3 = styled.div`
+    display: flex;
+`
+
+export const TituloPrincipal = styled.h1`
+    text-align: center;
+    font-size: 60px;
+`
+
+export const CajaTitulo = styled.div`
+    margin-top: 3rem;
+`
+
+export const CajaLinks = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    @media (max-width: 500px) {
+        align-items: center;
+  }
+`
+
+export const LinkIndividual = styled.a`
+    margin-left: 0.8rem;
+    margin-top: 2rem;
+`
+
+export const DivImg= styled.div`
+    @media (max-width: 803px) {
+        display: none;
+  }
+`
