@@ -1,6 +1,5 @@
 import FormContacto from "../FormContacto";
 import FotoTelefono from "../../assets/images/contact_image.png";
-import styled from "styled-components";
 import { CajaPrincipal, H2Descripcion, CajaTelefono, FotoContacto } from "../UI"
 
 
