@@ -1,10 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import Input from '@mui/material/Input';
 
-export const Icono = styled.img`
-    height: 25px;
-    width: 25px;
-`
+
 
 export const AbrirMenu = styled.img`
     position: fixed;
@@ -28,6 +25,11 @@ export const FotoContacto = styled.img`
     @media (max-width: 730px) {
         display: none;
   }
+`
+
+export const Icono = styled.img`
+    height: 25px;
+    width: 25px;
 `
 
 export const FotoError = styled.img`
