@@ -294,7 +294,7 @@ export const H4Skills = styled.h4`
 `
 
 export const TextoDescripcion = styled.p`
-margin-top: 2rem;
+    margin-top: 2rem;
     font-style: italic;
     font-weight: bold;
     font-size: 26px;
