@@ -15,35 +15,35 @@ const Skills = () => {
             <H2Descripcion>Skills</H2Descripcion>
             <CajaSkills>
                 <CajaSkill>
-                    <img src={FotoHtml} alt="Foto HTML" />
+                    <img src={FotoHtml} alt="Foto HTML" title="HTML" />
                     <H4Skills>HTML</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoCss} alt="Foto CSS" />
+                    <img src={FotoCss} alt="Foto CSS" title="CSS" />
                     <H4Skills>CSS</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoJs} alt="Foto JavaScript" />
+                    <img src={FotoJs} alt="Foto JavaScript" title="JavaScript" />
                     <H4Skills>JavaScript</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoReact} alt="Foto React" />
+                    <img src={FotoReact} alt="Foto React" title="React" />
                     <H4Skills>React</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoNode} alt="Foto Node JS" />
+                    <img src={FotoNode} alt="Foto Node JS" title="Node JS" />
                     <H4Skills>Nodejs</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoSQL} alt="Foto SQL" />
+                    <img src={FotoSQL} alt="Foto SQL" title="SQL" />
                     <H4Skills>SQL</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoPython} alt="Foto Python" />
+                    <img src={FotoPython} alt="Foto Python" title="Python" />
                     <H4Skills>Python</H4Skills>
                 </CajaSkill>
                 <CajaSkill>
-                    <img src={FotoGit} alt="Foto Git" />
+                    <img src={FotoGit} alt="Foto Git" title="Git" />
                     <H4Skills>Git</H4Skills>
                 </CajaSkill>
             </CajaSkills>

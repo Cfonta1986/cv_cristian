@@ -1,5 +1,7 @@
 # Pagina Propia
 
+Creada para mostrar mi info lo mas completa posible para que me conozcas.
+
 ## Tecnología usada
 
 * Página realizada con *ReactJS* utilizando las siguientes librerias:
@@ -13,6 +15,7 @@
     * Styled-components
 
 > Dicha Web traté de realizarla aplicando varios de los conocimientos adquiridos en los diferentes cursos realizados.
+
 
 ### Presione *[aquí][1]* para ver el deploy
 

@@ -12,7 +12,7 @@ const Formacion = () => {
             </div>
             <CajaCursos>
                 <CajaFormacion>
-                    <img src={FotoAlura} alt="Foto Alura" />
+                    <img src={FotoAlura} alt="Foto Alura" title="Alura" />
                     <h5>Principiante en Programación.</h5>
                     <h5>Business Agility.</h5>
                     <h5>HTML y CSS.</h5>
@@ -24,13 +24,13 @@ const Formacion = () => {
                     <TituloInstitucion>2022 / 2023 - Alura/Oracle</TituloInstitucion>
                 </CajaFormacion>
                 <CajaFormacion>
-                    <img src={FotoArgProg} alt="Foto Argentina Programa 4.0" />
+                    <img src={FotoArgProg} alt="Foto Argentina Programa 4.0" title="Argentina Programa 4.0" />
                     <h5>Principiante en Programación.</h5>
                     <h5>Procesamiento de datos con Python.</h5>
                     <TituloInstitucion>2022 / 2023 - Argentina Programa 4.0</TituloInstitucion>
                 </CajaFormacion>
                 <CajaFormacion>
-                    <img src={FotoGoogle} alt="Foto Google" />
+                    <img src={FotoGoogle} alt="Foto Google"title="Google" />
                     <h5>Introducción al Marketing Digital.</h5>
                     <h5>Desarrollo de Apps Móviles.</h5>
                     <h5>Comercio Electrónico.</h5>

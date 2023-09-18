@@ -175,7 +175,6 @@ export const CajaSkill = styled.div`
 export const CajaFormacion = styled(CajaSkill)`
     height: 300px;
     width: 350px;
-    background-color: ${ ({ theme }) => theme.inside };
 `
 
 export const CajaExperiencia = styled(CajaSkill)`
